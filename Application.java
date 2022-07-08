@@ -40,14 +40,12 @@ public class Application extends JFrame {
         JMenuItem lineNeighbourItem = new JMenuItem("Line - nearest neighbour");
         JMenuItem clusterItem = new JMenuItem("Clusters");
         JMenuItem lineClusterItem = new JMenuItem("Line + Clusters");
-
         connectionMenu.add(lineNeighbourItem);
         connectionMenu.add(clusterItem);
         connectionMenu.add(lineClusterItem);
 
         JMenu helpMenu = new JMenu("Help");
         JMenuItem aboutItem = new JMenuItem("About");
-
         helpMenu.add(aboutItem);
 
         JMenuBar menuBar = new JMenuBar();

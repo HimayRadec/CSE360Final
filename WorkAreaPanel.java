@@ -26,6 +26,8 @@ public class WorkAreaPanel extends JPanel implements MouseListener {
 
     }
 
+    // When mouse click is released on the Work Area a new point is created.
+
     @Override
     public void mouseReleased(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY(), Color.BLACK);
@@ -45,7 +47,10 @@ public class WorkAreaPanel extends JPanel implements MouseListener {
 
     @Override
     public void paintComponent(Graphics g) {
-        super.paintComponent(g); // points
+        super.paintComponent(g); 
+        
+        // points
+
         List<Point> points = BlackBoard.getInstance().getPoints();
         if (points == null) return;
         g.setColor(Color.BLACK);
@@ -59,7 +64,9 @@ public class WorkAreaPanel extends JPanel implements MouseListener {
             }
             g.fillOval(p.getX() - 5, p.getY() - 5, 10, 10);
         }
+
         // lines
+        
         List<Line> lines = BlackBoard.getInstance().getLines();
         if (lines == null) return;
         for (Line l : lines) {

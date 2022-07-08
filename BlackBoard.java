@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 public class BlackBoard extends Observable {
+
     private ArrayList<Point> points;
     private ArrayList<Line> lines;
     private static BlackBoard instance;
+
     public static BlackBoard getInstance() {
         if (instance == null)
             instance = new BlackBoard();
@@ -24,6 +26,10 @@ public class BlackBoard extends Observable {
         points.add(p);
         setChanged();
         notifyObservers();
+    }
+
+    public void addLine (Line l) {
+        lines.add(l);
     }
 
     public void clearAll() {
